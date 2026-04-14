@@ -1,76 +1,55 @@
+# ✋ Air Writer and Air PC Controller
+
+Control your PC and write in the air using just your hand — no mouse, no keyboard, no touch required!
+
 ---
 
-## 🎮 Controls Quick Reference
+## 🎯 What Is This?
 
-### Air Writer
-| Input | Action |
-|-------|--------|
-| ☝️ 1 finger | Draw |
-| ✌️ 2 fingers | Move |
-| 🖐️ All fingers | Erase |
-| C key | Clear |
-| S key | Save |
-| Q key | Quit |
+Two powerful computer vision applications built with MediaPipe hand tracking:
 
-### Air PC Controller
-| Input | Action |
-|-------|--------|
-| ☝️ Index up | Move cursor |
-| 👌 Thumb+Index pinch | Left click |
-| 🤏 Thumb+Middle pinch | Right click |
-| 🖐️ All fingers up | Scroll up |
+| App | Description |
+|-----|-------------|
+| ✋ Air Writer | Draw and write in the air using your finger as a pen |
+| 🖥️ Air PC Controller | Control your entire PC with hand gestures |
+
+---
+
+## ✋ Air Writer Features
+
+- 🎨 5 Colors — Green, Blue, Red, Yellow, White
+- ☝️ 1 finger — Draw mode
+- ✌️ 2 fingers — Move without drawing
+- 🖐️ All fingers — Erase mode
+- C key — Clear canvas
+- S key — Save drawing as PNG
+- Q key — Quit
+
+---
+
+## 🖥️ Air PC Controller Features
+
+| Gesture | Action |
+|---------|--------|
+| ☝️ Index finger | Move mouse cursor |
+| 👌 Pinch thumb and index | Left click |
+| 🤏 Pinch thumb and middle | Right click |
+| 🖐️ All 5 fingers up | Scroll up |
 | 👊 Fist | Scroll down |
-| ✌️ 2 fingers close | Double click |
+| ✌️ 2 fingers together | Double click |
 
 ---
 
-## 📊 Performance
+## 🛠️ Tech Stack
 
-- ⚡ Real-time processing at **30+ FPS**
-- 🎯 Hand detection accuracy — **95%+**
-- 🖥️ Works on any Windows PC with webcam
-- 💡 No GPU required — runs on CPU
-
----
-
-## ⚠️ Safety Note
-
-PyAutoGUI FAILSAFE is enabled — move your hand to the **top-left corner** of screen to stop the controller immediately!
+- Python 3.12
+- OpenCV — Camera capture and drawing
+- MediaPipe — Real-time hand tracking
+- PyAutoGUI — Mouse and keyboard control
+- NumPy — Array processing
 
 ---
 
-## 🔮 Future Improvements
+## 🚀 Installation and Setup
 
-- [ ] Voice commands combined with gestures
-- [ ] Multi-hand support
-- [ ] Custom gesture mapping
-- [ ] MacOS and Linux support
-- [ ] Virtual keyboard in air
-- [ ] Zoom in/out gesture
-- [ ] Screenshot gesture
-
----
-
-## 👨‍💻 Author
-
-**Abdullah Javid**
-BS Artificial Intelligence @ UMT Lahore
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Abdullah_Javid-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/abdullah-javid-b217a2384)
-[![GitHub](https://img.shields.io/badge/GitHub-mabdullahab614--alt-black?style=for-the-badge&logo=github)](https://github.com/mabdullahab614-alt)
-
----
-
-## 🏆 More Projects
-
-| Project | Description | Link |
-|---------|-------------|------|
-| 🧠 NeuroScan AI | Brain Tumor Detector — 92.2% accuracy | [Live Demo](https://huggingface.co/spaces/Abdullah2894830/brain-tumor-detector) |
-| 🏥 Skin Disease AI | Detects 9 skin conditions — 71.8% accuracy | [Live Demo](https://huggingface.co/spaces/BUDDDY2894830/skin-disease-detector) |
-| ⚡ NEXUS AI | Live AI Assistant with web search | [Live Demo](https://huggingface.co/spaces/BUDDDY2894830/nexus-ai-assistant) |
-
----
-
-⭐ **Star this repo if you found it useful!**
-
-> Built with ❤️ by Abdullah Javid — PakAI | UMT Lahore
+### Step 1 — Clone the repo
