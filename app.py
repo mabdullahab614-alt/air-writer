@@ -1,6 +1,5 @@
 import os
 os.environ["GRADIO_ANALYTICS_ENABLED"] = "False"
-os.environ["HF_HUB_OFFLINE"] = "1"
 
 import gradio as gr
 import cv2

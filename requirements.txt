@@ -1,7 +1,6 @@
-opencv-python
+opencv-python-headless
 mediapipe==0.10.21
 numpy<2
-gradio
-pyautogui
+gradio==6.14.0
 Pillow
 protobuf>=4.25.3,<5
