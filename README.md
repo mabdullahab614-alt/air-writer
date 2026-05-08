@@ -12,260 +12,174 @@ license: mit
 
 <div align="center">
 
-<!-- LOGO PLACEHOLDER -->
-<!-- <img src="assets/logo.png" alt="Air Writer Logo" width="140" /> -->
-
-# ✋ AIR WRITER
-
-### *Your hand is the only interface you'll ever need.*
-
-> Draw, write, and control your entire PC — in mid-air — powered by real-time AI hand tracking.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=✋%20AIR%20WRITER&fontSize=60&fontColor=00f5ff&animation=twinkling&fontAlignY=38&desc=Draw%20in%20mid-air%20with%20your%20bare%20hand&descAlignY=58&descColor=bf00ff&descSize=20" width="100%"/>
 
 <br/>
 
+[![HF Spaces](https://img.shields.io/badge/🤗%20HuggingFace-LIVE%20DEMO-FF6F00?style=for-the-badge&labelColor=0d1117)](https://huggingface.co/spaces/Abdullah2894830/air-writer)
+[![GitHub](https://img.shields.io/badge/GitHub-air--writer-181717?style=for-the-badge&logo=github&labelColor=0d1117)](https://github.com/mabdullahab614-alt/air-writer)
 [![Stars](https://img.shields.io/github/stars/mabdullahab614-alt/air-writer?style=for-the-badge&color=FFD700&labelColor=0d1117)](https://github.com/mabdullahab614-alt/air-writer/stargazers)
-[![Forks](https://img.shields.io/github/forks/mabdullahab614-alt/air-writer?style=for-the-badge&color=00f5ff&labelColor=0d1117)](https://github.com/mabdullahab614-alt/air-writer/network/members)
-[![Issues](https://img.shields.io/github/issues/mabdullahab614-alt/air-writer?style=for-the-badge&color=ff006e&labelColor=0d1117)](https://github.com/mabdullahab614-alt/air-writer/issues)
-[![License](https://img.shields.io/github/license/mabdullahab614-alt/air-writer?style=for-the-badge&color=bf00ff&labelColor=0d1117)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-bf00ff?style=for-the-badge&labelColor=0d1117)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0d1117)](https://python.org)
-[![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10.21-0097A7?style=for-the-badge&logo=google&logoColor=white&labelColor=0d1117)](https://mediapipe.dev)
+[![Status](https://img.shields.io/badge/Status-LIVE%20%F0%9F%9F%A2-00ff88?style=for-the-badge&labelColor=0d1117)](https://huggingface.co/spaces/Abdullah2894830/air-writer)
 
 <br/>
 
-<!-- DEMO GIF PLACEHOLDER -->
-<!-- <img src="assets/demo.gif" alt="Air Writer Demo" width="700" /> -->
+> **Your webcam is the canvas. Your finger is the brush. No hardware required.**
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 </div>
 
 ---
 
-## 🔥 The Hook
+## 🔥 What Is Air Writer?
 
-**Air Writer** eliminates the boundary between thought and digital creation. Using nothing but a standard webcam and your bare hand, the AI tracks 21 precise landmark points on your fingers in real time — letting you draw, erase, and navigate your entire PC without touching a single device. This is not a prototype — it's a fully working, production-ready human-computer interaction system built by a BS AI student at UMT Lahore, and it runs in your browser right now.
+**Air Writer** is a real-time computer vision application that turns your bare hand into a digital drawing tool. Using **MediaPipe's 21-point hand landmark detection**, it tracks your finger position at 30fps and lets you draw, move, and erase — all in mid-air, through any webcam, in your browser. No stylus. No touchscreen. No install.
 
----
-
-## 🎯 Two Powerful Modes
-
-<div align="center">
-
-| Mode | Launch File | Interface |
-|------|-------------|-----------|
-| ✋ **Air Writer** | `app.py` | Gradio Web App (Browser) |
-| 🖥️ **Air PC Controller** | `controller.py` | Native Desktop Window |
-
-</div>
+```
+Webcam → MediaPipe (21 landmarks) → Gesture Classification → Canvas Rendering → Your Browser
+```
 
 ---
 
 ## ✨ Feature Showcase
 
-### ✋ Air Writer — Draw in the Air
-
 <table>
-  <tr>
-    <td>☝️ <b>Index Finger Up</b></td>
-    <td>Enters <b>DRAW</b> mode — your fingertip becomes the pen</td>
-  </tr>
-  <tr>
-    <td>✌️ <b>Two Fingers Up</b></td>
-    <td>Enters <b>MOVE</b> mode — lifts the pen, reposition freely</td>
-  </tr>
-  <tr>
-    <td>🖐️ <b>All Fingers Up</b></td>
-    <td>Enters <b>ERASE</b> mode — wipes a 40px radius circle in real time</td>
-  </tr>
-  <tr>
-    <td>🎨 <b>5-Color Palette</b></td>
-    <td>Green · Blue · Red · Yellow · White — switchable from the sidebar</td>
-  </tr>
-  <tr>
-    <td>🗑️ <b>Clear Canvas</b></td>
-    <td>One-click canvas wipe via the Gradio UI</td>
-  </tr>
-  <tr>
-    <td>📷 <b>Live Overlay</b></td>
-    <td>Drawing is composited directly onto the live camera feed</td>
-  </tr>
-  <tr>
-    <td>🌐 <b>Browser-Based UI</b></td>
-    <td>Runs fully in-browser via Gradio — no native GUI needed</td>
-  </tr>
+<tr>
+<td width="50%">
+
+### ✍️ Air Writer (Web App)
+| Gesture | Action |
+|---------|--------|
+| ☝️ Index finger up | **DRAW** — trace pixel-perfect lines |
+| ✌️ Index + Middle up | **MOVE** — reposition without marking |
+| 🖐️ All fingers up | **ERASE** — wipe a 40px radius instantly |
+| 🗑️ Clear Canvas btn | **RESET** — blank slate in one click |
+
+</td>
+<td width="50%">
+
+### 🖥️ Air PC Controller (Desktop)
+| Gesture | Action |
+|---------|--------|
+| ☝️ Index finger | Move mouse cursor |
+| 👌 Pinch index+thumb | Left click |
+| 🤏 Pinch middle+thumb | Right click |
+| ✌️ 2 fingers pinched | Double click |
+| 🖐️ Open palm | Scroll up |
+| ✊ Fist | Scroll down |
+
+</td>
+</tr>
 </table>
+
+### 🎨 Color Palette
+![Green](https://img.shields.io/badge/●-Green-00ff00?style=flat-square)
+![Blue](https://img.shields.io/badge/●-Blue-6464ff?style=flat-square)
+![Red](https://img.shields.io/badge/●-Red-ff3333?style=flat-square)
+![Yellow](https://img.shields.io/badge/●-Yellow-ffff00?style=flat-square)
+![White](https://img.shields.io/badge/●-White-ffffff?style=flat-square)
 
 ---
 
-### 🖥️ Air PC Controller — Control Your PC with Gestures
-
-<table>
-  <tr>
-    <td>☝️ <b>Index Finger</b></td>
-    <td>Moves the mouse cursor (smoothed with 7-frame interpolation)</td>
-  </tr>
-  <tr>
-    <td>👌 <b>Pinch — Thumb + Index</b></td>
-    <td>Left Click (20-frame cooldown to prevent double-firing)</td>
-  </tr>
-  <tr>
-    <td>🤏 <b>Pinch — Thumb + Middle</b></td>
-    <td>Right Click</td>
-  </tr>
-  <tr>
-    <td>✌️ <b>2 Fingers Pinched Together</b></td>
-    <td>Double Click</td>
-  </tr>
-  <tr>
-    <td>🖐️ <b>All 5 Fingers Up</b></td>
-    <td>Scroll Up (3 units)</td>
-  </tr>
-  <tr>
-    <td>✊ <b>Fist — All Fingers Down</b></td>
-    <td>Scroll Down (3 units)</td>
-  </tr>
-</table>
-
----
-
-## 🏗️ Tech Architecture
+## 🏗️ Tech Stack
 
 <div align="center">
 
-| Layer | Technology | Role |
-|-------|-----------|------|
-| 🧠 **AI / CV** | [MediaPipe 0.10.21](https://mediapipe.dev) | 21-point hand landmark detection at 30fps |
-| 👁️ **Vision** | [OpenCV 4.x](https://opencv.org) | Camera feed, canvas blending, drawing primitives |
-| 🌐 **Web UI** | [Gradio 6.x](https://gradio.app) | Streaming webcam + real-time output display |
-| 🖱️ **OS Control** | [PyAutoGUI 0.9.54](https://pyautogui.readthedocs.io) | Cross-platform mouse, click, scroll |
-| 🔢 **Math** | [NumPy < 2.0](https://numpy.org) | Landmark interpolation, coordinate mapping |
-| 🖼️ **Images** | [Pillow 12.x](https://pillow.readthedocs.io) | Frame conversion for Gradio pipeline |
-| 🐍 **Runtime** | Python 3.12 | Core language |
+| Layer | Technology | Version | Role |
+|-------|-----------|---------|------|
+| 🧠 **AI / Vision** | MediaPipe | 0.10.35 | 21-point hand landmark detection @ 30fps |
+| 👁️ **Image Processing** | OpenCV | 4.x | Camera flip, canvas blend, drawing primitives |
+| 🌐 **Web Interface** | Gradio | 6.14.0 | Streaming webcam + live output rendering |
+| 🔢 **Numerics** | NumPy | 1.26.4 | Coordinate mapping, bitwise mask operations |
+| 🖼️ **Images** | Pillow | 12.x | Frame format conversion for Gradio pipeline |
+| 🖱️ **OS Control** | PyAutoGUI | 0.9.54 | Mouse movement, clicks, scroll (controller mode) |
+| 🐍 **Runtime** | Python | 3.12 | Core language |
 
 </div>
 
 ---
 
-## 🧠 How It Works
+## ⚡ How It Works
 
-```
-Webcam Frame
-     │
-     ▼
-MediaPipe Hands  ──►  21 Landmarks (x, y, z per joint)
-     │
-     ▼
-fingers_up()  ──►  [thumb, index, middle, ring, pinky] boolean array
-     │
-     ├── index only      ──►  DRAW  → cv2.line() on canvas
-     ├── index + middle  ──►  MOVE  → lift pen, reposition
-     └── all up          ──►  ERASE → cv2.circle() black mask
-     │
-     ▼
-Bitwise Merge (canvas + camera frame)
-     │
-     ▼
-HUD Overlay → Gradio Output Stream
+```python
+# 1. Capture webcam frame (RGB via Gradio)
+frame → flip(mirror) → MediaPipe HandLandmarker
+
+# 2. Get 21 hand landmarks
+landmarks[8]  = index fingertip  →  drawing cursor
+landmarks[4]  = thumb tip        →  click detection (controller)
+
+# 3. Classify gesture
+fingers_up() → [thumb, index, middle, ring, pinky]
+  all[1:]     → ERASE mode
+  [1] + [2]   → MOVE  mode
+  [1] only    → DRAW  mode
+
+# 4. Render
+cv2.line(canvas, prev, current, color, thickness=8)
+
+# 5. Composite
+merged = bitwise_and(frame, mask_inv) + bitwise_and(canvas, mask)
+
+# 6. Stream to browser via Gradio
+return cv2.cvtColor(merged, COLOR_BGR2RGB)
 ```
 
 ---
 
-## ⚡ Performance
-
-> **Tested on:** Windows 10, Python 3.12, standard 720p webcam
+## 📊 Performance Specs
 
 | Metric | Value |
 |--------|-------|
-| Hand detection latency | ~30ms per frame |
-| Landmark confidence threshold | 0.70 |
-| Tracking confidence threshold | 0.70 |
-| Cursor smoothing factor | 7-frame weighted average |
-| Click cooldown | 20 frames (~667ms at 30fps) |
-| Erase brush radius | 40 pixels |
-| Canvas draw thickness | 8 pixels |
+| Hand detection | MediaPipe Tasks API (0.10.35) |
+| Landmark points | 21 per hand |
+| Detection confidence | 0.70 threshold |
+| Draw thickness | 8 px |
+| Erase radius | 40 px |
+| Cursor smoothing | 7-frame weighted avg (controller) |
+| Click cooldown | 20 frames @ 30fps ≈ 667ms |
+| Canvas layers | 2 (camera feed + drawing canvas) |
+| Blend method | Bitwise AND/ADD (zero-copy) |
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Option A — Browser (No Install)
 
-- Python 3.10 or higher
-- A working webcam
-- Windows / macOS / Linux
+Click below — it opens instantly in your browser:
+
+[![Launch App](https://img.shields.io/badge/🚀%20Launch%20Air%20Writer-Live%20on%20HuggingFace-FF6F00?style=for-the-badge&labelColor=0d1117)](https://huggingface.co/spaces/Abdullah2894830/air-writer)
 
 ---
 
-### 1 — Clone the Repository
+### Option B — Run Locally
 
 ```bash
+# 1. Clone
 git clone https://github.com/mabdullahab614-alt/air-writer.git
 cd air-writer
-```
 
----
-
-### 2 — Create a Virtual Environment
-
-```bash
+# 2. Create virtual environment
 python -m venv venv
+venv\Scripts\activate          # Windows
+# source venv/bin/activate     # macOS/Linux
 
-# Windows
-venv\Scripts\activate
-
-# macOS / Linux
-source venv/bin/activate
-```
-
----
-
-### 3 — Install Dependencies
-
-```bash
+# 3. Install dependencies
 pip install -r requirements.txt
-```
 
-> **Note:** If you have TensorFlow installed system-wide, use the virtual environment above to avoid protobuf version conflicts.
-
----
-
-### 4 — Run Air Writer (Web App)
-
-```bash
+# 4. Launch Air Writer (web UI)
 python app.py
-```
+# → Open http://127.0.0.1:7860
 
-Then open your browser at **http://127.0.0.1:7860**
-
----
-
-### 5 — Run Air PC Controller (Desktop)
-
-```bash
+# 5. OR launch PC Controller (desktop)
 python controller.py
+# → Press Q to quit
 ```
 
-A native OpenCV window opens. Press **Q** to quit.
-
----
-
-## 🎮 Usage Guide
-
-### Air Writer (Browser)
-
-1. Allow camera access when prompted by the browser
-2. Your live feed appears on the right panel
-3. **Raise your index finger** to start drawing
-4. **Switch colors** using the radio buttons on the left
-5. **Raise all fingers** to switch to Erase mode
-6. **Tick "Clear Canvas"** to wipe and start fresh
-
-### Air PC Controller (Desktop)
-
-1. Hold your hand flat in front of the camera
-2. Move your **index finger** to control the cursor
-3. **Pinch thumb + index** to left-click
-4. **Pinch thumb + middle** to right-click
-5. **Open palm** to scroll up, **make a fist** to scroll down
-6. Press **Q** to exit
+> **Note:** If you have TensorFlow installed system-wide, use the `venv` to avoid protobuf version conflicts.
 
 ---
 
@@ -274,78 +188,66 @@ A native OpenCV window opens. Press **Q** to quit.
 ```
 air-writer/
 │
-├── app.py              # Gradio web app — Air Writer
-├── gradio_app.py       # Alternate Gradio interface
-├── controller.py       # Desktop Air PC Controller
-├── requirements.txt    # Pinned dependencies
-├── .gitignore          # Excludes venv, cache
-└── README.md           # This file
+├── 📄 app.py              ← Gradio web app (Air Writer)
+├── 📄 gradio_app.py       ← Alternate Gradio interface
+├── 📄 controller.py       ← Desktop Air PC Controller
+├── 📄 requirements.txt    ← Pinned dependencies
+├── 📄 packages.txt        ← System libs for HF Spaces (OpenGL ES)
+├── 📄 .gitignore
+└── 📄 README.md
 ```
+
+---
+
+## 🐛 Troubleshooting
+
+| Problem | Fix |
+|---------|-----|
+| `No module named mediapipe` | Use the project venv, not system Python |
+| Camera not showing | Allow browser camera permissions when prompted |
+| Jerky drawing | Improve room lighting; keep hand centred |
+| HF Space slow to start | First cold start downloads the 10MB model — wait 30s |
+| Controller cursor jumps | Ensure only one hand is visible in frame |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community extraordinary. Any improvements are **greatly appreciated**.
-
 ```bash
-# 1. Fork the project
-# 2. Create your feature branch
-git checkout -b feature/AmazingFeature
-
-# 3. Commit your changes
-git commit -m "Add AmazingFeature"
-
-# 4. Push to your branch
-git push origin feature/AmazingFeature
-
-# 5. Open a Pull Request
+git checkout -b feature/your-idea
+git commit -m "feat: your idea"
+git push origin feature/your-idea
+# → Open a Pull Request
 ```
 
 **Ideas welcome:**
 - Multi-hand support
-- Shape recognition (circle, line, rectangle detection)
-- Export drawing as SVG
-- Gesture-based color switching (no UI needed)
-- Mobile browser support via WebRTC
-
----
-
-## 🐛 Known Issues & Troubleshooting
-
-| Problem | Fix |
-|---------|-----|
-| `ModuleNotFoundError: mediapipe` | Run inside the `venv` — do not use system Python if TensorFlow is installed |
-| Camera not detected | Check webcam permissions in your OS settings |
-| Gradio page loads but no camera | Allow camera access in browser when prompted |
-| Cursor jumps erratically | Improve lighting; keep hand within frame center |
-| Drawing lags | Lower your webcam resolution in `cap.set()` |
+- Shape snapping (circle, line, rectangle)
+- SVG export
+- Gesture-based color switching
+- Mobile WebRTC support
 
 ---
 
 ## 📄 License
 
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
+MIT — free to use, modify, and deploy.
 
 ---
 
-## 👨‍💻 Author
-
 <div align="center">
 
-**Abdullah Javid**
-BS Artificial Intelligence · University of Management and Technology (UMT), Lahore
+**Built by [Abdullah Javid](https://github.com/mabdullahab614-alt)**
+BS Artificial Intelligence · UMT Lahore
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-00f5ff?style=for-the-badge&labelColor=0d1117)](https://portfolio-website-jet-iota-21.vercel.app/)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Abdullah2894830-FF6F00?style=for-the-badge&logo=huggingface&labelColor=0d1117)](https://huggingface.co/Abdullah2894830)
 [![GitHub](https://img.shields.io/badge/GitHub-mabdullahab614--alt-181717?style=for-the-badge&logo=github&labelColor=0d1117)](https://github.com/mabdullahab614-alt)
+
+<br/>
 
 *"The best interface is no interface."*
 
-</div>
-
----
-
-<div align="center">
-
-⭐ **If this project saved you time or inspired you, drop a star — it means the world.** ⭐
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
 
 </div>
